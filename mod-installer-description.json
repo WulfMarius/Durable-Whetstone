@@ -1,0 +1,18 @@
+﻿{
+	"name": "Durable-Whetstone",
+	"description": "Greatly increases the durability of the whetstone.",
+	"url": "https://github.com/WulfMarius/Durable-Whetstone",
+	"releases": [
+		{
+			"version": "2.0.0",
+			"url": "https://github.com/WulfMarius/Durable-Whetstone/releases/tag/2.0.0",
+			"changes": "updated to work with TLD V1.27",
+			"dependencies": [],
+			"assets": [
+				{
+					"url": "https://github.com/WulfMarius/Durable-Whetstone/releases/download/2.0.0/Durable-Whetstone-V2.0.0.zip"
+				}
+			]
+		}
+	]
+}
