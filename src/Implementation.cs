@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
-using Harmony;
 
 namespace DurableWhetstone
 {
     public class Implementation
     {
+        private const string NAME = "Durable-Whetstone";
+
         public static void OnLoad()
         {
-            Debug.Log("[Durable-Whetstone]: Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
+            Log("Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
         }
 
         internal static void AdjustDegradeOnUse(GameObject gameObject, float value)
@@ -19,6 +20,17 @@ namespace DurableWhetstone
             }
 
             degradeOnUse.m_DegradeHP = value;
+        }
+
+        internal static void Log(string message)
+        {
+            Debug.LogFormat("[" + NAME + "] {0}", message);
+        }
+
+        internal static void Log(string message, params object[] parameters)
+        {
+            string preformattedMessage = string.Format("[" + NAME + "] {0}", message);
+            Debug.LogFormat(preformattedMessage, parameters);
         }
     }
 }
